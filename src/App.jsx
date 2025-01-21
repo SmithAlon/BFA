@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Instagram, Facebook, Linkedin, Mail, Phone } from 'lucide-react';
 
+
 // Header Component
 const Header = () => {
   const scrollToNextSection = () => {
@@ -11,6 +12,34 @@ const Header = () => {
 
   return (
     <div className="relative h-screen overflow-hidden">
+          <nav className="fixed top-0 right-0 p-4 bg-black/0 z-50">
+      <ul className="flex space-x-6">
+        <li>
+          <a
+            href="#"
+            className="text-white text-lg font-38px hover:text-orange-150 transition-colors"
+          >
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a
+            href="#about"
+            className="text-white text-lg font-38px hover:text-orange-150 transition-colors"
+          >
+            Nosotros
+          </a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            className="text-white text-lg font-38px hover:text-orange-150 transition-colors"
+          >
+            Contacto
+          </a>
+        </li>
+      </ul>
+    </nav>
       {/* Logo */}
       <motion.img
         src="/src/assets/image_1_-removebg-preview.png"
