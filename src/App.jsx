@@ -2,6 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Instagram, Facebook, Linkedin, Mail, Phone } from 'lucide-react';
 
+// Import the images at the top
+import logo from '/src/assets/image_1_-removebg-preview.png';
+import heroBg from '/src/assets/bfa-6.svg';
+import card1Img from '/src/assets/bfa-2.png';
+import card2Img from '/src/assets/bfa1.png';
+import card3Img from '/src/assets/bfa-3.png';
 
 // Header Component
 const Header = () => {
@@ -12,37 +18,37 @@ const Header = () => {
 
   return (
     <div className="relative h-screen overflow-hidden">
-          <nav className="fixed top-0 right-0 p-4 bg-black/0 z-50">
-      <ul className="flex space-x-6">
-        <li>
-          <a
-            href="#"
-            className="text-white text-lg font-38px hover:text-orange-150 transition-colors"
-          >
-            Inicio
-          </a>
-        </li>
-        <li>
-          <a
-            href="#about"
-            className="text-white text-lg font-38px hover:text-orange-150 transition-colors"
-          >
-            Nosotros
-          </a>
-        </li>
-        <li>
-          <a
-            href="#contact"
-            className="text-white text-lg font-38px hover:text-orange-150 transition-colors"
-          >
-            Contacto
-          </a>
-        </li>
-      </ul>
-    </nav>
-      {/* Logo */}
+      <nav className="fixed top-0 right-0 p-4 bg-black/0 z-50">
+        <ul className="flex space-x-6">
+          <li>
+            <a
+              href="#"
+              className="text-white text-lg font-38px hover:text-orange-150 transition-colors"
+            >
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              className="text-white text-lg font-38px hover:text-orange-150 transition-colors"
+            >
+              Nosotros
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              className="text-white text-lg font-38px hover:text-orange-150 transition-colors"
+            >
+              Contacto
+            </a>
+          </li>
+        </ul>
+      </nav>
+      {/* Logo - Using imported image */}
       <motion.img
-        src="/src/assets/image_1_-removebg-preview.png"
+        src={logo}
         alt="Best Food for All"
         className="w-36 mx-auto pt-8"
         initial={{ y: -100, opacity: 0 }}
@@ -59,7 +65,7 @@ const Header = () => {
       >
         <div className="relative mx-4 w-max-10/12">
           <img
-            src="/src/assets/bfa-6.svg"
+            src={heroBg}
             alt=""
             className="w-full rounded-lg h-[400px]"
           />
@@ -108,15 +114,15 @@ const Card = ({ img, text, delay }) => (
 const About = () => {
   const cards = [
     {
-      img: "src/assets/bfa-2.png",
+      img: card1Img,
       text: "Sabores de tu tierra: nutrición para la vida. Recetas que reflejan el color y los ingredientes locales, creando alternativas saludables que reflejan la riqueza cultural de cada región. (Desde 2006)"
     },
     {
-      img: "src/assets/bfa1.png",
+      img: card2Img,
       text: "Juntos construimos un futuro mejor. Al emplear a personas de nuestras comunidades, invertimos en su futuro y en el de todos. (Desde 2010)"
     },
     {
-      img: "src/assets/bfa-3.png",
+      img: card3Img,
       text: "Por cada tres platillos vendidos, uno llega para favorecer a sectores comunitarios que lo necesitan. Sin cargos extra, unidos hacia una mejor vida.    (Desde 2011)"
     }
   ];
@@ -219,7 +225,7 @@ const Contact = () => {
         </motion.div>
 
         <motion.img
-          src="/src/assets/image_1_-removebg-preview.png"
+          src={logo}
           alt="Best Food for All"
           className="w-24 mt-12"
           initial={{ opacity: 0 }}
