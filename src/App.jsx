@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import { Instagram, Facebook, Linkedin, Mail, Phone } from 'lucide-react';
 
 // Import the images at the top
-import logo from '/src/assets/image_1_-removebg-preview.png';
-import heroBg from '/src/assets/bfa-6.svg';
-import card1Img from '/src/assets/bfa-2.png';
-import card2Img from '/src/assets/bfa1.png';
-import card3Img from '/src/assets/bfa-3.png';
+import logo from './assets/image_1_-removebg-preview.png';
+import heroBg from './assets/bfa-6.png';
+import card1Img from './assets/bfa-2.png';
+import card2Img from './assets/bfa1.png';
+import card3Img from './assets/bfa-3.png';
 
 // Header Component
 const Header = () => {
